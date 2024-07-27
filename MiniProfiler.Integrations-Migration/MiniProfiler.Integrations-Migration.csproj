@@ -1,26 +1,18 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net462</TargetFrameworks>
-    <RootNamespace>MiniProfiler.Integrations</RootNamespace>
-    <AssemblyName>MiniProfiler.Integrations</AssemblyName>
+	  <TargetFrameworks>netstandard2.0</TargetFrameworks>
+	<RootNamespace>MiniProfiler.Integrations</RootNamespace>
+	<AssemblyName>MiniProfiler.Integrations</AssemblyName>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <DocumentationFile>D:\Wip\Practices\Github\MiniProfiler.Integrations\MiniProfiler.Integrations-Migration\MiniProfiler.Integrations.xml</DocumentationFile>
-  </PropertyGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'net462'">
-    <PackageReference Include="MiniProfiler" Version="4.2.1" />
-  </ItemGroup>
-
-  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
-    <PackageReference Include="MiniProfiler.AspNetCore" Version="4.2.1" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  <ItemGroup>
+	<PackageReference Include="MiniProfiler.AspNetCore" Version="4.2.22" />
+	<PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="MiniProfiler.Integrations.xml" />
+	<None Remove="MiniProfiler.Integrations.xml" />
   </ItemGroup>
 
 </Project>
